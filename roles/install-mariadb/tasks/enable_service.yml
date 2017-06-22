@@ -1,0 +1,6 @@
+---
+- name: Enable service MariaDB on centos
+  command: /usr/bin/systemctl enable "{{ mariadb_service_name }}"
+
+- name: Start MairaDB service
+  command: /usr/bin/systemctl start "{{ mariadb_service_name }}"

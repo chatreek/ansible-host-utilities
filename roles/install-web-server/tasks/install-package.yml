@@ -1,0 +1,19 @@
+---
+- name: Add remi repository.
+  yum:
+    name: "{{ web_server_php_remi_repository }}"
+    state: present
+
+- name: Enable installation PHP 7.0 on CentOS
+  copy:
+    src: templates/remi-php70.repo.j2
+    dest: /etc/yum.repos.d/remi-php70.repo
+    owner: root
+    group: root
+
+- name: Install Nginx & PHP
+  yum:
+     name: "{{ item }}"
+     state: latest
+  with_items:
+    - "{{ web_server_package_list }}"

@@ -1,0 +1,23 @@
+---
+- block: # Change to use official repository and update all packages
+  - name: Install EPEL repository on centos
+    yum:
+      name: epel-release
+      state: latest
+
+  - name: upgrade all packages
+    yum:
+      name: '*'
+      state: latest
+
+  tags:
+    - host-preparation-update-packages
+
+- name: Install base packages
+  yum:
+     name: "{{ item }}"
+     state: latest
+  with_items: "{{ host_preparation_base_packages }}"
+
+  tags:
+    - host-preparation-install-base-packages

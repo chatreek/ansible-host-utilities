@@ -1,0 +1,10 @@
+---
+service_name: elasticsearch
+elasticsearch_url: # go to https://www.elastic.co/downloads/elasticsearch to choose version.
+elasticsearch_culster_name: clustername
+elasticsearch_nodename: "nodename"
+elasticsearch_data_path: /var/lib/elasticsearch
+elasticsearch_bootstrap_mlockall: true
+elasticsearch_network_host: 0.0.0.0
+elasticsearch_zen_ping: ["server1", "server2", "server3"]
+es_fdata_cache_size: 30%

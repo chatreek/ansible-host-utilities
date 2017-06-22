@@ -1,0 +1,5 @@
+---
+- name: Install libselinux-python before disable SELinux on CentOS.
+  yum:
+    name: libselinux-python
+    state: latest

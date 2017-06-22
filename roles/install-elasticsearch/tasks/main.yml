@@ -1,0 +1,4 @@
+---
+  - include: install_elasticsearch.yml
+  - include: config_elasticsearch.yml
+  - include: enable_service.yml
