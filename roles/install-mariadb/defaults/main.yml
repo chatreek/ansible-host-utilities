@@ -1,0 +1,7 @@
+---
+mariadb_server_package_name: mariadb-server
+mariadb_packages:
+  - "{{ mariadb_server_package_name }}"
+  - mariadb
+  - mytop
+mariadb_service_name: mariadb.service

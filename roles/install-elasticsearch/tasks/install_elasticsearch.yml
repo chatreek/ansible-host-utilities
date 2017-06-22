@@ -1,0 +1,15 @@
+---
+  - name: Install Elasticsearch for CentOS.
+    yum:
+      name: "{{ elasticsearch_url }}"
+      state: present
+
+  - name: Apply elasticsearch configuration.
+    template:
+      dest: /etc/yum.repos.d/kibana.repo
+      src: templates/kibana.repo.j2
+
+  - name: Install Kibana
+    yum:
+      name: kibana
+      state: present

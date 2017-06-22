@@ -1,0 +1,4 @@
+---
+  - include: install-package.yml
+  - include: configuration.yml
+  - include: enable-service.yml

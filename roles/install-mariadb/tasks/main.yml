@@ -1,0 +1,4 @@
+---
+- include: mariadb_install.yml
+- include: configuration.yml
+- include: enable_service.yml

@@ -1,0 +1,7 @@
+---
+- name: Install MariaDB and 3party.
+  yum:
+     name: "{{ item }}"
+     state: latest
+  with_items:
+    - "{{ mariadb_packages }}"

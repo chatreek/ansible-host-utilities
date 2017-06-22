@@ -1,0 +1,5 @@
+---
+  - name: Install JDK8 for CentOS.
+    yum:
+      name: "{{ java_package_name }}"
+      state: latest
