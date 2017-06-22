@@ -1,3 +1,0 @@
----
-- name: Start elasticsearch service.
-  shell: /usr/bin/systemctl start "{{ service_name }}"

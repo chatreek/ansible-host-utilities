@@ -1,8 +1,0 @@
----
-- name: Stop elasticsearch service before config.
-  shell: /usr/bin/systemctl stop "{{ service_name }}"
-
-- name: Apply elasticsearch configuration.
-  template:
-    dest: /etc/elasticsearch/elasticsearch.yml
-    src: templates/elasticsearch.yml.j2
