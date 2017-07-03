@@ -1,0 +1,11 @@
+---
+  - name: Install Docker for CentOS.
+    yum:
+      name: "{{ package_name }}"
+      state: latest
+
+  - name: enable service docker
+    shell: systemctl enable "{{ package_name }}"
+
+  - name: start docker service.
+    shell: systemctl start docker
