@@ -1,0 +1,6 @@
+---
+  - name: Disable firewall (Can do if this server is behind firewall box.).
+    shell: systemctl disable firewalld
+
+  - name: Turn of firewall (iptables).
+    shell: systemctl stop firewalld
