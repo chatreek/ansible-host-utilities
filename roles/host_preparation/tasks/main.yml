@@ -1,5 +1,6 @@
 ---
 - include: install_libselinux.yml
+- include: disable_iptable.yml
 - include: disable_selinux.yml
 - include: reboot.yml
 - include: packages_centos.yml
