@@ -1,2 +1,2 @@
 [ansible_host]
-localhost
+hostname ansible_user=centos host_preparation_host_name=hostname ansible_host=IP ansible_port=22

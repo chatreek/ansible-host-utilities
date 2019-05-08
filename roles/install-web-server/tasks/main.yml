@@ -1,4 +1,9 @@
 ---
-  - include: install-package.yml
+  - include: install-php-fpm-nginx-centos.yml
+    when: web_server_nginx_php_install and ansible_distribution == "CentOS"
+  - include: install-apache-php-xenial.yml
+    when:  ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'xenial'
   - include: configuration.yml
+    when: web_server_nginx_php_install and ansible_distribution == 'CentOS'
   - include: enable-service.yml
+    when: web_server_nginx_php_install and ansible_distribution == 'CentOS'
