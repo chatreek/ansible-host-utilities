@@ -1,0 +1,18 @@
+---
+- name: Install dependency on Ubuntu Xenial.
+  apt:
+    pkg: "{{ item }}"
+  with_items:
+    - "{{ web_server_xenial_dependency_package_list }}"
+
+- name: Install PHP5 repository.
+  apt_repository:
+    repo: ppa:ondrej/php
+    state: present
+
+- name: Install Apache2 & PHP5 packages.
+  apt:
+     pkg: "{{ item }}"
+     state: latest
+  with_items:
+    - "{{ web_server_package_list }}"

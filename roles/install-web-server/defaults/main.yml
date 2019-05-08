@@ -1,4 +1,5 @@
 ---
+web_server_nginx_php_install: no
 web_server_name: typo3
 web_server_php_service: php-fpm.service
 web_server_nginx_service: nginx.service
@@ -18,5 +19,36 @@ web_server_package_list:
   - php-soap
   - php-pecl-imagick
   - php-ZendFramework-Cache-Backend-Apc
-
+web_server_xenial_package_list:
+  - apache2
+  - php5.6
+  - libapache2-mod-php5.6
+  - php5.6-curl
+  - php5.6-gd
+  - php5.6-mbstring
+  - php5.6-mcrypt
+  - php5.6-mysql
+  - php5.6-xml
+  - php5.6-xmlrpc
+web_server_xenial_dependency_package_list:
+  - build-essential
+  - wget
+  - nano
+  - libfcgi-dev
+  - libfcgi0ldbl
+  - libjpeg62-dbg
+  - libmcrypt-dev
+  - libssl-dev
+  - libc-client2007e
+  - ibc-client2007e-dev
+  - libxml2-dev
+  - libbz2-dev
+  - libcurl4-openssl-dev
+  - libjpeg-dev
+  - libpng12-dev
+  - libfreetype6-dev
+  - libkrb5-dev
+  - libpq-dev
+  - libxml2-dev
+  - libxslt1-dev
 web_server_php_remi_repository: http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
