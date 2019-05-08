@@ -1,2 +1,2 @@
 [ansible_host]
-test-ns-web-logging ansible_user=centos host_preparation_host_name=test-ns-web-logging ansible_host=172.18.1.75 ansible_port=22
+hostname ansible_user=centos host_preparation_host_name=hostname ansible_host=IP ansible_port=22
